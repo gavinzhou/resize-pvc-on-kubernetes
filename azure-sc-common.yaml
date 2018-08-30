@@ -1,0 +1,11 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: common
+provisioner: kubernetes.io/azure-disk
+parameters:
+  cachingmode: None
+  kind: Managed
+  storageaccounttype: Standard_LRS
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
